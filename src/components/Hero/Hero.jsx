@@ -54,16 +54,32 @@ const Hero = () => {
                 <div className='grid grid-cols-1 sm:grid-cols-2'>
                     {/* text container setion */}
                     <div className='flex flex-col justify-center gap-4 pt-12 sm:pt-0 text-center sm:text-left order-2 sm:order-1 relative z-10'>
-                        <h1 className='text-5xl sm:text-6xl lg:text-7xl font-bold'>{items.title}</h1>
-                        <p className='text-sm'>{items.description}</p>
-                        <div>
+                        <h1 
+                        data-aos="zoom-out"
+                        data-aos-duration="500"
+                        data-aos-once="true"
+                        className='text-5xl sm:text-6xl lg:text-7xl font-bold'>{items.title}</h1>
+                        <p 
+                        data-aos="fade-up"
+                        data-aos-duration="500"
+                        data-aos-delay="100"
+                        
+                        className='text-sm'>{items.description}</p>
+                        <div
+                        data-aos="fade-up"
+                        data-aos-duration="500"
+                        data-aos-delay="300" 
+                        >
                         <button className='bg-primary text-white px-4 py-2 rounded-full font-bold hover:bg-secondary transition-all duration-300'>Order Now</button>
                         </div>
                         
                     </div>
                     {/*image setion */}
                     <div className='order-1 sm:order-2'>
-                      <div className='relative z-10'>
+                      <div 
+                      data-aos="zoom-in"
+                      data-aos-once="true"
+                      className='relative z-10'>
                         <img src={items.img} alt='' className='w-[300px] h-[300px] sm:h-[450px] sm:[450px] sm:scale-105 lg:scale-120 object-contain mx-auto'/>
                       </div>
                     </div>
