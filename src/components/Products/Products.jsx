@@ -38,6 +38,14 @@ const ProductsData = [
     color: "yellow",
     aosDelay: "600",
   },
+  {
+    id: 5,
+    img: Img2,
+    title: "Fashin T-Shirt",
+    rating: 4.5,
+    color: "pink",
+    aosDelay: "800",
+  },
 ];
 
 const Products = () => {
@@ -55,7 +63,7 @@ const Products = () => {
         </div>
         {/* card section  */}
         <div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 place-items-center gap-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5 place-items-center gap-5">
             {ProductsData.map((items) => (
               <div 
               data-aos-delay={items.aosDelay} 
