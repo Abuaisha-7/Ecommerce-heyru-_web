@@ -30,11 +30,16 @@ const ProductsData = [
 ];
 
 const TopProducts = () => {
+
+const handleOrderPopup = () => {
+  alert("Order Placed Successfully")
+}
+
   return (
     <div className="mt-8 mb-12">
       <div className="container">
         {/* Header section  */}
-        <div className="text-left mb-10">
+        <div className="text-left mb-24">
           <p data-aos="fade-up" className=" text-primary">
             Top Rated Products for you
           </p>
@@ -50,12 +55,26 @@ const TopProducts = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-20 md:gap-5 place-items-center ">
             {
                 ProductsData.map((items) => (
-                    <div>
+                    <div 
+                    data-aos= "zoom-in"
+                    className="rounded-2xl bg-white dark:bg-gray-800 hover:bg-black/80 dark:hover:bg-primary hover:text-white relative shadow-xl duration-300 group max-w-[300px]">
                         {/* image section  */}
-                        <div>
-                          <img src={items.img} alt="" />
+                        <div className="h-[100px]">
+                          <img src={items.img} alt="" className="max-w-[140px] block mx-auto transform -translate-y-20 group-hover:scale-105 transition-all duration-300 drop-shadow-md"/>
                         </div>
                         {/* detail section  */}
+                        <div className="p-4 text-center">
+                          {/* star rating  */}
+                          <div className="w-full flex items-center justify-center gap-1">
+                            <FaStar className="text-yellow-500"/>
+                            <FaStar className="text-yellow-500"/>
+                            <FaStar className="text-yellow-500"/>
+                            <FaStar className="text-yellow-500"/>
+                          </div>
+                          <h1 className="text-xl font-bold">{items.title}</h1>
+                          <p className="text-gray-500 text-sm group-hover:text-white duration-300 line-clamp-2">{items.description}</p>
+                          <button className='bg-primary hover:scale-105 text-white px-4 py-1 mt-4 rounded-full group-hover:text-primary group-hover:bg-white duration-300' onClick={handleOrderPopup}>Order Now</button>
+                        </div>
 
                     </div>
                 ))
