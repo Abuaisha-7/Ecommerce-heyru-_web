@@ -13,6 +13,7 @@ export default {
       '5xl': '3.052rem',
       '6xl': '3.52rem',
       '7xl': '4.052rem',
+      '9xl': '6.76rem',
     },
     extend: {
       colors: {
