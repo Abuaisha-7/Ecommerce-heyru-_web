@@ -29,11 +29,7 @@ const ProductsData = [
   
 ];
 
-const TopProducts = () => {
-
-const handleOrderPopup = () => {
-  alert("Order Placed Successfully")
-}
+const TopProducts = ({handleOrderPopup}) => {
 
   return (
     <div className="mt-8 mb-12">

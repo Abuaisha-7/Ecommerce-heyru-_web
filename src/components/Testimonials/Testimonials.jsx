@@ -37,7 +37,7 @@ const TestimonialData = [
 const Testimonials = () => {
 
     var settings = {
-        dots: false,
+        dots: true,
         arrows: false,
         infinite: true,
         speed: 500,

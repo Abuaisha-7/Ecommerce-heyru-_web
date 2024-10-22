@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import Navbar from './components/Navbar/Navbar'
 import Hero from './components/Hero/Hero'
 import Products from './components/Products/Products'
@@ -9,9 +9,19 @@ import Banner from './components/Banner/Banner'
 import Subscrib from './components/Subscrib/Subscrib'
 import Testimonials from './components/Testimonials/Testimonials'
 import Footer from './components/Footer/Footer'
+import Popup from './components/Popup/Popup.JSX'
+
+
+
 
 
 const App = () => {
+
+  const [orderPopup,setOrderPopup]=useState(false);
+
+  const handleOrderPopup = () => {
+    setOrderPopup(!orderPopup);
+  };
 
   useEffect(() => {
     Aos.init({
@@ -19,20 +29,22 @@ const App = () => {
       duration: 800,
       easing: 'ease-in-sine',
       delay: 100,
-    })
+    });
+    Aos.refresh();
   }, [])
 
   return (
-    <div>
-      <Navbar/>
-      <Hero/>
+    <div className='bg-white dark:bg-gray-900 dark:text-white duration-200'>
+      <Navbar handleOrderPopup={handleOrderPopup}/>
+      <Hero handleOrderPopup={handleOrderPopup}/>
       <Products/>
-      <TopProducts/>
+      <TopProducts handleOrderPopup={handleOrderPopup}/>
       <Banner/>
       <Subscrib/>
       <Products/>
       <Testimonials/>
       <Footer/>
+      <Popup orderPopup={orderPopup} setOrderPopup={setOrderPopup}/>
     </div>
   )
 }

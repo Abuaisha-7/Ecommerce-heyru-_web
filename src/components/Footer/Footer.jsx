@@ -4,6 +4,8 @@ import Banner from "../../assets/website/footer-pattern.jpg";
 import { FaInstagram } from "react-icons/fa";
 import { MdFacebook } from "react-icons/md";
 import { FaLinkedin } from "react-icons/fa";
+import { FaLocationArrow } from "react-icons/fa";
+import { FaMobileAlt } from "react-icons/fa";
 
 const BannerImg = {
     backgroundImage: `url(${Banner})`,
@@ -35,9 +37,9 @@ const FooterLinks = [
 
 const Footer = () => {
   return (
-    <div style={BannerImg} className='text-white mb-20'>
-        <div className='container'>
-            <div className='grid md:grid-cols-3 pv-44 pt-5'>
+    <div style={BannerImg} className='text-white'>
+        <div className='container pb-44'>
+            <div data-aos="zoom in" className='grid md:grid-cols-3 pt-5'>
                 {/* campany details  */}
                 <div className='py-8 px-4 '>
                     <h1 className='flex sm:text-3xl text-xl font-bold sm:text-left text-justify gap-3 item-center mb-3 '>
@@ -48,7 +50,7 @@ const Footer = () => {
                 <div className='grid grid-cols-2 sm:grid-cols-3 col-span-2 md:pl-10'>
                     <div>
                         <div className='py-8 px-4'>
-                            <h1 className='sm:text-3xl text-xl font-bold sm:text-left text-justify'>Important Links</h1>
+                            <h1 className='sm:text-xl text-xl font-bold sm:text-left text-justify'>Important Links</h1>
                             <ul className='flex flex-col gap-3'>
                                 {
                                     FooterLinks.map((items) => (
@@ -64,7 +66,7 @@ const Footer = () => {
                     </div>
                     <div>
                         <div className='py-8 px-4'>
-                            <h1 className='sm:text-3xl text-xl font-bold sm:text-left text-justify'>Important Links</h1>
+                            <h1 className='sm:text-xl text-xl font-bold sm:text-left text-justify'>Links</h1>
                             <ul className='flex flex-col gap-3'>
                                 {
                                     FooterLinks.map((items) => (
@@ -80,7 +82,7 @@ const Footer = () => {
                     </div>
                     {/* social links  */}
                     <div>
-                        <div className='flex'>
+                        <div className='flex items-center gap-3 mt-6'>
                             <a href="">
                             <FaInstagram className='text-3xl'/>
                             </a>
@@ -90,6 +92,16 @@ const Footer = () => {
                             <a href="">
                             <FaLinkedin className='text-3xl'/>
                             </a>     
+                        </div>
+                        <div className='mt-6'>
+                            <div className='flex items-center gap-3'>
+                            <FaLocationArrow />
+                            <p>Noida, Uttar Pradesh</p>
+                            </div>
+                            <div className='flex items-center gap-3 mt-3'>
+                            <FaMobileAlt />
+                            <p>+251 912797388</p>
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -51,7 +51,7 @@ const DropdawnLinks = [
   },
 ];
 
-const Navbar = () => {
+const Navbar = ({handleOrderPopup}) => {
   return (
     <div className="shadow-md bg-white dark:bg-slate-900 dark:text-white">
       {/* upper nav bar with logo */}
@@ -77,7 +77,7 @@ const Navbar = () => {
             </div>
             {/* order button will go here */}
             <button
-              onClick={() => alert("Order not available yet!")}
+              onClick={() => handleOrderPopup()}
               className="bg-primary text-white px-4 py-2 rounded-full font-bold hover:bg-secondary transition-all duration-300 flex items-center gap-3 group"
             >
               <span className="group-hover:block hidden transition-all duration-300">
@@ -93,7 +93,7 @@ const Navbar = () => {
         </div>
       </div>
       {/* lower nav bar */}
-      <div className="flex justify-center">
+      <div data-aos="zoom-in" className="flex justify-center">
         <ul className="sm:flex hidden items-center gap-5">
           {Menu.map((item) => (
             <li key={item.id}>

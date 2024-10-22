@@ -25,7 +25,7 @@ const ImageList = [
 }
 ];
 
-const Hero = () => {
+const Hero = ({handleOrderPopup}) => {
 
   var settings = {
     dots: false,
@@ -70,7 +70,7 @@ const Hero = () => {
                         data-aos-duration="500"
                         data-aos-delay="300" 
                         >
-                        <button className='bg-primary text-white px-4 py-2 rounded-full font-bold hover:bg-secondary transition-all duration-300'>Order Now</button>
+                        <button className='bg-primary text-white px-4 py-2 rounded-full font-bold hover:bg-secondary transition-all duration-300' onClick={handleOrderPopup}>Order Now</button>
                         </div>
                         
                     </div>
