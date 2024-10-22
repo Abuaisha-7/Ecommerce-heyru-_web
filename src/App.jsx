@@ -8,6 +8,7 @@ import TopProducts from './components/TopProducts/TopProducts'
 import Banner from './components/Banner/Banner'
 import Subscrib from './components/Subscrib/Subscrib'
 import Testimonials from './components/Testimonials/Testimonials'
+import Footer from './components/Footer/Footer'
 
 
 const App = () => {
@@ -31,6 +32,7 @@ const App = () => {
       <Subscrib/>
       <Products/>
       <Testimonials/>
+      <Footer/>
     </div>
   )
 }
